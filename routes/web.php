@@ -33,3 +33,5 @@ Route::get('/auth/register', function () {
 Route::post('/auth/register', [FrontendAuthController::class, 'register']);
 
 Route::get('/auth/logout', [FrontendAuthController::class, 'logout']);
+
+Route::get('/auth/dashboard', [FrontendAuthController::class, 'user']);
