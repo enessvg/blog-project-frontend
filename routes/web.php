@@ -23,11 +23,17 @@ Route::get('/category/{slug}', [HomeController::class, 'singleCategory']);
 #Category
 
 Route::get('/auth/login', function () {
+    if(session()->get('token')){
+        return redirect('/');
+    }
     return view('login');
 });
 Route::post('/auth/login', [FrontendAuthController::class, 'loginf']);
 
 Route::get('/auth/register', function () {
+    if(session()->get('token')){
+        return redirect('/');
+    }
     return view('register');
 });
 Route::post('/auth/register', [FrontendAuthController::class, 'register']);

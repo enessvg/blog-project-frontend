@@ -37,7 +37,7 @@ class FrontendAuthController extends Controller
             $token = $response->json('token');
             session(['token' => $token, 'name' => $name, 'email' => $email]);
 
-            return redirect('/')->withErrors(['message' => 'The login is successful. Welcome...']);
+            return redirect('/auth/dashboard')->withErrors(['message' => 'The login is successful. Welcome...']);
         } else {
             return redirect('/auth/login')->withErrors(['error' => 'The email or password is incorrect.']);
         }
