@@ -51,8 +51,8 @@
             aria-labelledby="profile-tab">
             <p><strong>Name:</strong> {{ $userData['name'] }}</p>
             <p><strong>Email:</strong> {{ $userData['email'] }}</p>
-            <p><strong>Avatar URL:</strong> <img class="rounded-full w-20 h-20" src="{{ $userData['avatar_url'] ? $userData['avatar_url'] : 'https://i.hizliresim.com/gabu2xu.png' }}" alt="User Photo"></p>
-            <p><strong>Profile Bio:</strong> {{ $userData['profile_bio'] ? $userData['profile_bio'] : 'Not added.'  }}</p>
+          	<p><strong>Avatar URL:</strong> <img class="rounded-full w-20 h-20" src="{{ $userData['avatar_url'] ? env('API_URL').'storage/'.$userData['avatar_url'] : 'https://i.hizliresim.com/gabu2xu.png' }}" alt="User Photo"></p>  
+          	<p><strong>Profile Bio:</strong> {{ $userData['profile_bio'] ? $userData['profile_bio'] : 'Not added.'  }}</p>
             <p><strong>Created At:</strong> {{ \Carbon\Carbon::parse($userData['created_at'])->format('d F Y') }}</p>
         </div>
     </div>
