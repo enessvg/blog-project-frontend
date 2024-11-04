@@ -5,14 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @if (empty($post))
-        <title>ES-Blog</title>
+    <title>{{ $siteSettings['title'] }}</title>
     @else
-        <title>{{ $post['title'] }} | ES-Blog </title>
+    <title>{{ $post['title'] }} | {{ $siteSettings['title'] }} </title>
     @endif
+<meta name="title" content="{{ $siteSettings['title'] }}">
+    <meta name="description" content="{{ $siteSettings['description'] }}">
+    <meta name="author" content="BytenBlade | Enes SVG">
+    <meta name="keywords" content="{{ implode(', ', $siteSettings['keywords']) }}">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('css/prism.min.css') }}">
-    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ $siteSettings['favicon'] }}" type="image/png">
     <style>
 
         @media only screen and (max-width:425px){
@@ -30,8 +34,8 @@
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="https://i.hizliresim.com/gabu2xu.png" class="h-8" alt="ES-BLOG Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ES-BLOG</span>
+                <img src="{{ $siteSettings['icon'] }}" class="h-8" alt="{{ $siteSettings['title'] }} Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">{{ $siteSettings['title'] }}</span>
             </a>
             <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                 @if (session('token'))
@@ -40,7 +44,7 @@
                         id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
                         data-dropdown-placement="bottom">
                         <span class="sr-only">Open user menu</span>
-                        <img class="w-8 h-8 rounded-full" src="https://i.hizliresim.com/gabu2xu.png" alt="user photo">
+                        <img class="w-8 h-8 rounded-full" src="{{ $siteSettings['icon'] }}" alt="user photo">
                     </button>
                     <!-- Dropdown menu -->
                     <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
