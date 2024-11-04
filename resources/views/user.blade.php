@@ -83,7 +83,7 @@
                 </div>
                 <div class="mb-6">
                     <label for="avatar_url" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Avatar</label>
-                    <img id="avatar_url" class="w-20 h-20 rounded-full" src="{{ $userData['avatar_url'] ? env('API_URL').'storage/'.$userData['avatar_url'] : 'https://i.hizliresim.com/gabu2xu.png' }}" alt="Rounded avatar">
+                    <img id="avatar_url" class="w-20 h-20 rounded-full" src="{{ $userData['avatar_url'] ? env('API_URL').'storage/'.$userData['avatar_url'] : '{{ $siteSettings['icon'] }}' }}" alt="Rounded avatar">
                     <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" name="avatar_url" id="avatar_url" type="file" disabled>
                 </div>
                 <div class="mb-6">

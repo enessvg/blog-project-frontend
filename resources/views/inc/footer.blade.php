@@ -3,8 +3,8 @@
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
               <a href="/" class="flex items-center">
-                  <img src="https://i.hizliresim.com/gabu2xu.png" class="h-8 me-3" alt="ES-BLOG Logo" />
-                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ES-BLOG</span>
+                  <img src="{{ $siteSettings['icon'] }}" class="h-8 me-3" alt="ES-BLOG Logo" />
+                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">{{ $siteSettings['title'] }}</span>
               </a>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
