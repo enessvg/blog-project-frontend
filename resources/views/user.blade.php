@@ -65,7 +65,7 @@
     <div id="default-tab-content">
         <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Profile Tab</h3>
-        <p class="mb-2">You can view and update your information here. This feature is currently disabled.</p>
+        <p class="mb-2">Bilgilerinizi burada görüntüleyebilir ve güncelleyebilirsiniz. Bu özellik şu anda devre dışıdır.</p>
             <form class="mt-5">
                 <div class="grid gap-6 mb-6 md:grid-cols-2">
                     <div>
