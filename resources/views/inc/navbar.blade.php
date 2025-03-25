@@ -22,16 +22,22 @@
         @media only screen and (max-width:425px){
             .d-none-custom{
             display: none;
+        	}
         }
+      
+      @media only screen and (min-width:769px){
+          .ml-10px{
+          	margin-left:10px !important;
+          }
         }
         .ml-10px{
-            margin-left: 10px;
-        }
+          	margin-left:0px;
+          }
     </style>
 </head>
 
 <body class="dark-mode">
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <nav class="sticky top-0 bg-white border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="{{ $siteSettings['icon'] }}" class="h-8" alt="{{ $siteSettings['title'] }} Logo" />

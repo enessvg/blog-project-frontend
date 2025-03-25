@@ -32,7 +32,6 @@
   }
 
 .fixed-card {
-    width: 380px; /* Kart genişliğini için */
     /* height: 511px;  Kart yüksekliğini için */
     display: flex;
     flex-direction: column;
