@@ -34,8 +34,9 @@ class FrontendAuthController extends Controller
         if ($response->successful()) {
             $name = $response->json('user')['name'];
             $email = $response->json('user')['email'];
+          	$avatar = $response->json('user')['avatar_url'];
             $token = $response->json('token');
-            session(['token' => $token, 'name' => $name, 'email' => $email]);
+            session(['token' => $token, 'name' => $name, 'email' => $email, 'avatar' => $avatar]);
 
             return redirect('/auth/dashboard')->withErrors(['message' => 'The login is successful. Welcome...']);
         } else {
@@ -60,6 +61,7 @@ class FrontendAuthController extends Controller
             'email' => $request->email,
             'password' => $request->password,
             'password_confirmation' => $request->password_confirmation,
+            'ip_address' => $request->ip(),
         ]);
 
         if ($response->successful()) {
