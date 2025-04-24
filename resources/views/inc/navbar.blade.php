@@ -50,7 +50,7 @@
                         id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
                         data-dropdown-placement="bottom">
                         <span class="sr-only">Open user menu</span>
-                        <img class="w-8 h-8 rounded-full" src="{{ $siteSettings['icon'] }}" alt="user photo">
+                        <img class="w-8 h-8 rounded-full" src="{{ !empty(session('avatar')) ? env('API_URL').'storage/'.session('avatar') : $siteSettings['icon'] }}" alt="user photo">
                     </button>
                     <!-- Dropdown menu -->
                     <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
