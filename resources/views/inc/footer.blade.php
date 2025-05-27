@@ -77,6 +77,7 @@ if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localS
 </script>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 <script src="{{ asset('js/prism.min.js') }}"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 </body>
 </html>
