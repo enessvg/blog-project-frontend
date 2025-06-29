@@ -13,6 +13,7 @@
     <meta name="description" content="{{ $siteSettings['description'] }}">
     <meta name="author" content="BytenBlade | Enes SVG">
     <meta name="keywords" content="{{ implode(', ', $siteSettings['keywords']) }}">
+  	<meta name="google-adsense-account" content="ca-pub-1211644961001439">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('css/prism.min.css') }}">
